@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mt-5">تحديث المحصول</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label for="crop_name" class="form-label">اسم المحصول</label>
+        <input type="text" class="form-control" id="crop_name" name="crop_name" required>
+    </div>
+    <div class="mb-3">
+        <label for="quantity" class="form-label">المبلغ بالدرهم</label>
+        <input type="number" class="form-control" id="quantity" name="quantity" required>
+    </div>
+    <div class="mb-3">
+        <label for="operation" class="form-label">نوع العملية</label>
+        <select class="form-select" id="operation" name="operation" required>
+            <option value="شراء">شراء</option>
+            <option value="بيع">بيع</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">حفظ</button>
+</form>
+{% endblock %}

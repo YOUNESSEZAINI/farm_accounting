@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mt-5">إضافة دخل جديد</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label for="income_source" class="form-label">مصدر الدخل</label>
+        <input type="text" class="form-control" id="income_source" name="income_source" required>
+    </div>
+    <div class="mb-3">
+        <label for="amount" class="form-label">المبلغ بالدرهم</label>
+        <input type="number" class="form-control" id="amount" name="amount" required>
+    </div>
+    <button type="submit" class="btn btn-primary">إضافة</button>
+</form>
+{% endblock %}

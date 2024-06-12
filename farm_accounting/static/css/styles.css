@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    direction: rtl;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #17a2b8; /* لون الترويسة */
+    color: #fff;
+    padding: 10px 20px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+.table thead th {
+    background-color: #17a2b8; /* لون رأس الجدول */
+    color: #fff;
+    border: none;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #ddd;
+}
+
+.btn {
+    background-color: #28a745; /* لون الزر */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #218838;
+}

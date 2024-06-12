@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mt-5">عرض البيانات</h2>
+
+<h3>المحاصيل</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>اسم المحصول</th>
+            <th>المبلغ بالدرهم</th>
+            <th>نوع العملية</th>
+            <th>الوقت</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for crop in crops %}
+        <tr>
+            <td>{{ crop[1] }}</td>
+            <td>{{ crop[2] }}</td>
+            <td>{{ crop[3] }}</td>
+            <td>{{ crop[4] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><strong>مجموع المحاصيل: </strong>{{ total_crops or 0 }}</p>
+
+<h3>المصروفات</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>اسم المصروف</th>
+            <th>المبلغ</th>
+            <th>الوقت</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense[1] }}</td>
+            <td>{{ expense[2] }}</td>
+            <td>{{ expense[3] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><strong>مجموع المصروفات: </strong>{{ total_expenses or 0 }}</p>
+
+<h3>الدخل</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>مصدر الدخل</th>
+            <th>المبلغ</th>
+            <th>الوقت</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for income in incomes %}
+        <tr>
+            <td>{{ income[1] }}</td>
+            <td>{{ income[2] }}</td>
+            <td>{{ income[3] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><strong>مجموع الدخل: </strong>{{ total_incomes or 0 }}</p>
+{% endblock %}
